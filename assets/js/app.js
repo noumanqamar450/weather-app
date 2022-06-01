@@ -186,7 +186,7 @@ function renderData(lat, long, label) {
                 link.rel = 'icon';
                 document.getElementsByTagName('head')[0].appendChild(link);
             }
-            link.href = `http://openweathermap.org/img/wn/${weather.current.weather[0].icon}@2x.png`;
+            link.href = `https://openweathermap.org/img/wn/${weather.current.weather[0].icon}@2x.png`;
             document.getElementsByTagName('title')[0].innerHTML = `${cen}°C / ${feh}°F - Weather App | Find Your Weather`;
 
 
