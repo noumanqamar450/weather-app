@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/weather-icons-master/css/weather-icons.css">
+    <link rel="stylesheet" href="./assets/weather-icons-master/css/weather-icons-wind.css">
+    <title></title>
+    <link id="favicon" rel="shortcut icon" type="image/png" href="favicon.png" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="search-bar">
+            <div class="menu">
+                <div class="menu-btn">MENU <i class="fa fa-bars active" aria-hidden="true"></i><i class="fa fa-times" aria-hidden="true"></i></div>
+                <ul class="drop-menu">
+                    <li><a id="homebtn">Home</a></li>
+                    <li><a id="aboutbtn">About Us</a></li>
+                    <li><a id="contactbtn">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="search-form">
+                <form action="">
+                    <input type="text" name="" id="address" placeholder="Check Weather via Address">
+                    <button id="search">Search</button>
+                </form>
+            </div>
+        </div>
+        <!-- Weather Data -->
+        <div class="weather" id="home">
+            <div class="address">
+                <div id="addressLabel">
+                    <h4><i class="fa fa-map-marker"></i> Your Current Location</h4>
+                </div>
+                <div class="time"></div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <!-- Current Weather Data -->
+
+                    <div class="current-weather">
+                        <h3>Current Weather</h3>
+                        <div class="weather-icon">
+
+                        </div>
+                        <div id="weatherDesc" style="margin-bottom:10px;">
+                            <span>Not Found</span>
+                        </div>
+
+                    </div>
+                    <div class="temp">
+                        <div class="temp-btn">
+                            <button class="c active">°C</button>
+                            <button class="f">°F</button>
+                        </div>
+                        <div id="temp1">
+                            <h1 id="c-temp">0 °C</h1>
+                            <h1 id="f-temp" style="display:none;">0 °F</h1>
+                        </div>
+                        <div class="row wrap">
+                            <div class="col-4-l">
+                                <div class="temp2">
+                                    <i class="wi wi-barometer"></i>
+                                    <span>Feel Like</span>
+                                    <div id="feel-like">
+                                        <h3 id="c-temp">0 °C</h3>
+                                        <h3 id="f-temp" style="display:none;">0 °F</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4-l ">
+                                <div class="temp2">
+                                    <i class="wi wi-humidity"></i>
+                                    <span>Humidity</span>
+                                    <div id="humidity">
+                                        <h3>0%</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4-l">
+                                <div class="temp2">
+                                    <i class="wi wi-cloudy-gusts"></i>
+                                    <span>Wind</span>
+                                    <div id="windspeed">
+                                        <h3 title="Meter/Sec">0 M/S</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4-l">
+                                <div class="temp2">
+                                    <i class="wi wi-sunrise"></i>
+                                    <span>Sunrise</span>
+                                    <div id="sunrise">
+                                        <h3>00:00AM</h3>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-4-l">
+                                <div class="temp2">
+                                    <i class="wi wi-sunset"></i>
+                                    <span>Sunset</span>
+                                    <div id="sunset">
+                                        <h3>00:00PM</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4-l">
+                                <div class="temp2">
+                                    <i class="wi wi-cloudy"></i>
+                                    <span>Cloud</span>
+                                    <div id="cloud">
+                                        <h3>0%</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <!-- Hourly Weather Data -->
+                    <h3 class="heading">Next 24 Hour Weather</h3>
+                    <div class="hourly-weather">
+                        <!--  24 hours Weather Data-->
+                    </div>
+                </div>
+                <div class="col-4">
+                    <h3 class="heading">Next 7 Day Weather</h3>
+                    <div class="daily-weather">
+                        <!--  7 Days Weather Data-->
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="full-day-weather">
+            </div> -->
+        </div>
+
+
+        <!-- About PAge -->
+        <div class="about" id="about">
+            <h1>About Us</h1>
+            <p>Weather App has challenged the conventions around how weather information is shared with the public since 1993. We're immensely proud of the unique products that our community and meteorologists have created to improve people's access to meaningful
+                weather data from around the globe. As the Internet's 1st weather service, we consider ourselves pioneers within our field and we're constantly seeking new data sets and the next technologies that will help us share more data with more
+                people.
+            </p>
+        </div>
+        <div class="contact" id="contact">
+            <h1>Contact</h1>
+            <p>
+                Weather App is committed to delivering the most reliable, accurate weather information possible. <br>
+                <b>Membership Issues & Technical Support</b><br> Use our Knowledge Base to answer your membership & technical issues. We update it continuously to stay on top of common problems on our site. If your problem is not listed, you can ask us
+                directly using the email form. <br> <b> email@gmail.com</b>
+            </p>
+        </div>
+        <!-- Footer -->
+        <div class="footer">
+            <p>Copyright © 2022. All right reserved</p>
+            <p> Design & Develop 💗 By: <b>Nouman Qamar</b></p>
+        </div>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <script src="./assets/js/moment.min.js"></script>
+    <script src="./assets/js/app.js"></script>
+
+</body>
+
+</html>
