@@ -93,18 +93,18 @@ document.getElementById('search').addEventListener('click', function(e) {
     if (!address) {
         alert('Please enter the address.')
     } else {
-        let api_Key = '3d477d2dba42e574c0cee1efe3914180';
-        fetch(`http://api.positionstack.com/v1/forward?access_key=${api_Key}&query=${address}&limit=1`)
+        let api_Key = '5e8e6426f2f34337aafd6b064067fa0b';
+        fetch(`https://api.geoapify.com/v1/geocode/search?text=${address}&apiKey=${api_Key}`)
             .then(response => response.json())
             .then(datas => {
-                let latitude = datas.data[0].latitude;
-                let longitude = datas.data[0].longitude;
-                let label = datas.data[0].label;
+                let latitude = datas.features[0].properties.lat;
+                let longitude = datas.features[0].properties.lon;
+                let label = datas.features[0].properties.formatted;
                 renderData(latitude, longitude, label);
             })
             .catch((error) => {
                 if (error) {
-                    alert('Address not found, please enter correct address');
+                    alert('City not found, please enter correct city name.');
                 }
 
             });
